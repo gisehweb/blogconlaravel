@@ -1,8 +1,11 @@
-@extends('layouts.app')
+<!--esta etiqueta x-layout es como si invocaramos el componente-->
 
-@section('title', 'home')
-@section('content')
+<x-layouts.app 
+title="Home" 
+meta-description="Home meta description"
 
-<h1>Inicio</h1>
+>
 
-@endsection
+<h1>Home</h1>
+
+</x-layouts.app>
