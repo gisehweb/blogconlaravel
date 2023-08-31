@@ -2,18 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class PostController extends Controller
 {
     public function index()
     {
-        $posts =[
-            ['title'=> 'First Post'],
-            ['title'=> 'Second Post'],
-            ['title'=> 'Third Post'],
-            ['title'=> 'Fouth Post'],
-        ];
+      $posts= Post::get();
         return view('blog', ['posts'=>$posts]);
     }
 }
