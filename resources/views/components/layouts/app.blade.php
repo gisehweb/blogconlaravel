@@ -12,7 +12,11 @@
 
  <!-- con el yield('content') todo lo que queramos poner se colocara en esa seccion de la plantilla-->
 <x-layouts.navigation/>
-
+@if(session('status'))
+<div class="status">
+{{session('status')}}
+</div>
+@endif
 {{$slot}}
 <!--Este slot es equivalente al @yield('content') asi que lo podemos quitar-->
 </body>
